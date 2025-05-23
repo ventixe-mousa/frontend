@@ -1,42 +1,29 @@
-// src/services/eventService.js
+// src/services/calendarService.js
 
-const BASE = import.meta.env.VITE_API_EVENTS;
+const BASE = import.meta.env.VITE_API_CALENDAR;
 
-
-// Hämta events
-export async function getEvents() {
-  const res = await fetch(BASE);
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  return await res.json();
+// Hämta kalenderposter för en viss månad och år
+export async function getCalendar(year, month) {
+  const res = await fetch(`${BASE}?year=${year}&month=${month}`);
+  if (!res.ok) throw new Error(`Calendar fetch failed (${res.status})`);
+  return res.json();
 }
 
-// Skapa nytt event
-export async function createEvent(payload) {
+// Skapa en ny kalenderpost
+export async function createCalendarEntry(payload) {
   const res = await fetch(BASE, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
+    body: JSON.stringify(payload)
   });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  return await res.json();
+  if (!res.ok) throw new Error(`Could not create entry (${res.status})`);
+  return res.json();
 }
 
-// Uppdatera event
-export async function updateEvent(id, payload) {
+// Ta bort en kalenderpost
+export async function deleteCalendarEntry(id) {
   const res = await fetch(`${BASE}/${id}`, {
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
+    method: 'DELETE'
   });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  // PUT returnerar 204 NoContent, så vi kan själv returnera payload med rätt id
-  return { ...payload, id };
-}
-
-// Ta bort event
-export async function deleteEvent(id) {
-  const res = await fetch(`${BASE}/${id}`, {
-    method: 'DELETE',
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  if (!res.ok) throw new Error(`Could not delete entry (${res.status})`);
 }
