@@ -1,6 +1,7 @@
 // src/services/eventService.js
 
-const BASE = 'https://localhost:7226/api/events';
+const BASE = import.meta.env.VITE_API_EVENTS;
+
 
 // Hämta events
 export async function getEvents() {

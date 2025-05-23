@@ -1,5 +1,6 @@
 
-const BASE = 'https://localhost:7230/api/bookings'; 
+const BASE = import.meta.env.VITE_API_BOOKINGS;
+
 
 export async function getBookings(eventId) {
   const url = eventId ? `${BASE}?eventId=${eventId}` : BASE;

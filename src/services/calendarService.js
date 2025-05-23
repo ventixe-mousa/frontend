@@ -1,4 +1,5 @@
-const BASE_URL = 'https://localhost:7074/api/calendar';
+const BASE = import.meta.env.VITE_API_CALENDAR;
+
 
 export async function getCalendar(year, month) {
   const res = await fetch(`${BASE_URL}?year=${year}&month=${month}`);
