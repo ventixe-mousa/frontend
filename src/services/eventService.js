@@ -20,6 +20,15 @@ export async function createCalendarEntry(payload) {
   return res.json();
 }
 
+// src/services/eventService.js
+
+export async function getEvents() {
+  const res = await fetch(import.meta.env.VITE_API_EVENTS);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return await res.json();
+}
+
+
 // Ta bort en kalenderpost
 export async function deleteCalendarEntry(id) {
   const res = await fetch(`${BASE}/${id}`, {
