@@ -1,0 +1,121 @@
+
+.sidebar {
+  width: 270px;                  
+  background: #EEF0FF;
+  border-radius: 24px 24px 24px 24px;  
+  overflow: hidden;           
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 0;               
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+   margin-right: 12px;
+   margin-top: 12px;
+   margin-bottom: 12px;
+   margin-left: 12px;
+}
+
+.sidebar__logo {
+  display: block;
+  margin: 0 auto 40px;           
+  width: 130px;                  
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;    
+}
+
+.nav__item {
+  position: relative;
+  padding: 12px 24px 12px 32px; 
+  color: #333333;
+}
+
+.nav__item--active::before {
+  content: '';
+  position: absolute;
+  top: 12px;            
+  left: 0;
+  width: 4px;
+  height: calc(100% - 24px); 
+  background: #F26CF9;
+  border-radius: 2px 0 0 2px;
+}
+
+.nav__item:hover {
+  background: #f3e2e2;
+}
+
+.nav__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  fill: currentColor; 
+}
+
+.try-new {
+  margin: 0 24px;
+  padding: 12px;
+  background: #FF48C4;           
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sidebar__footer {
+  margin-top: auto;      
+  padding: 24px;         
+}
+
+.promo {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.promo__img {
+  width: 80px;
+  height: 100px;
+  margin-bottom: 12px;
+}
+
+.promo__text {
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+  color: #333333;
+}
+
+.promo__btn {
+  background: #F26CF9;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.signout {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #333333;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.signout__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}

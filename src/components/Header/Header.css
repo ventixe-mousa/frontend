@@ -1,0 +1,136 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(247, 247, 247, 1);
+  border-radius: 24px 24px 24px 24px; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px 10px 10px 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E5E7EB;
+  margin-right: 12px;
+   margin-top: 12px;
+   margin-bottom: 12px;
+  
+}
+
+.header__title {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__heading {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(55, 67, 125, 1);
+}
+
+.header__subheading {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: rgba(119, 119, 121, 1);
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.header__search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.header__search-input {
+  border: none;
+  outline: none;
+  margin-left: 8px;
+  font-size: 16px;
+  color: #37427D;
+  background: transparent;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+}
+
+.header__icon {
+  width: 42px;
+  height: 42px;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.header__user {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.header__username {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(28, 35, 70, 1);
+}
+
+.header__usertype {
+  display: block;
+  font-size: 12px;
+  color: rgba(119, 119, 121, 1);
+  margin-top: 2px;
+}
+
+.header__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  margin-left: 12px;
+  object-fit: cover;
+}
+
+
+.header__breadcrumb {
+  font-size: 14px;
+  margin: 0;
+  color: rgba(242, 108, 249, 1); 
+  display: flex;
+  align-items: center;
+}
+
+
+.header__breadcrumb--sep {
+  margin: 0 8px;
+  color: rgba(119, 119, 121, 1); 
+}
+
+
+.header__breadcrumb--secondary {
+  color: rgba(119, 119, 121, 1); 
+}
+
+
+.header__crumb {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header__crumb--highlight {
+  color: rgba(242, 108, 249, 1);
+}
+
+.header__crumb--dim {
+  color: rgba(119, 119, 121, 1);
+}
+
+.header__slash {
+  color: rgba(119, 119, 121, 1);
+  margin: 0 2px;
+}
+

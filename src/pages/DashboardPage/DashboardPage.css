@@ -1,0 +1,46 @@
+/* DashboardPage.css */
+
+.dashboard {
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.dashboard__title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--headline-color);
+}
+
+.dashboard__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.dashboard__card {
+  flex: 1 1 300px;
+  background: var(--gray-20);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard__card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--headline-color);
+  margin-bottom: 0.75rem;
+}
+
+.dashboard__card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard__card li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.4;
+}

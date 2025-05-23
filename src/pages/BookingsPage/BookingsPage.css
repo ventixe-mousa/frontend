@@ -1,0 +1,143 @@
+
+.bookings-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+.bp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bp-title {
+  font-size: 1.5rem;
+  color: var(--headline-color);
+}
+.bp-controls {
+  display: flex;
+  gap: 1rem;
+}
+.bp-search {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--separator-border-color);
+  border-radius: 0.5rem;
+  background: var(--input-background-color);
+  color: var(--text-color);
+  font-size: 0.875rem;
+}
+.bp-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--separator-border-color);
+  border-radius: 0.5rem;
+  background: var(--input-background-color);
+  color: var(--text-color);
+  font-size: 0.875rem;
+}
+
+
+.bp-table-card {
+  background: var(--card-background-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.05);
+  overflow-x: auto;
+}
+
+
+.bp-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 1000px; 
+}
+.bp-table th,
+.bp-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.bp-table th {
+  background: var(--section-background-color);
+  color: var(--secondary-100);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.bp-table td {
+  border-bottom: 1px solid var(--separator-border-color);
+  color: var(--text-color);
+  font-size: 0.875rem;
+}
+.bp-table tbody tr:hover {
+  background: var(--gray-20);
+}
+
+
+.bp-status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.bp-confirmed {
+  background: var(--primary-50);
+  color: var(--primary-100);
+}
+
+.bp-delete-btn {
+  background: var(--primary-50);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+
+}
+
+.bp-pending {
+  background: var(--cool-gray-20);
+  color: var(--secondary-70);
+}
+
+
+.bp-pagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.bp-pagination button {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background: var(--card-background-color);
+  color: var(--secondary-100);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+.bp-pagination button.active {
+  background: var(--primary-100);
+  color: var(--gray-10);
+}
+.bp-pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+
+.bp-loading,
+.bp-error {
+  color: var(--primary-100);
+  font-size: 1rem;
+  text-align: center;
+}
+.bp-error {
+  color: red;
+}

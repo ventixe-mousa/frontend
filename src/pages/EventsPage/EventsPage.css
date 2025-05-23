@@ -1,0 +1,277 @@
+
+.events-page {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.event-card__delete {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+
+}
+
+.events-list--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(274px, 1fr));
+  gap: 16px;
+}
+
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  gap: 12px;
+}
+
+
+.event-card__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+.event-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.event-card__category {
+  display: inline-block;
+  background-color: var(--primary-40);
+  color: var(--primary-100);
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+
+.event-card__title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--headline-color);
+  line-height: 1.3;
+}
+
+.event-card__desc {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted-color);
+  line-height: 1.4;
+}
+
+
+.event-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.875rem;
+  color: var(--text-muted-color);
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.meta-icon {
+  width: 16px;
+  height: 16px;
+}
+
+
+.event-card__stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background-color: var(--gray-20);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background-color: var(--primary-100);
+  transition: width 0.3s ease;
+}
+
+.stats-label {
+  font-size: 0.875rem;
+  white-space: nowrap;
+  color: var(--text-color);
+}
+
+
+.event-card__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.tickets-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ticket-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.tickets-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tickets-info .tickets-left {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.tickets-info .tickets-label {
+  font-size: 0.75rem;
+  color: var(--text-muted-color);
+}
+
+.btn-price {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: var(--primary-100);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Overlay */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal-fönstret */
+.modal {
+  background: var(--gray-40);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* Rubrik i modal */
+.modal h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: var(--headline-color);
+}
+
+/* Formulärets fält */
+.event-form label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.event-form input,
+.event-form select,
+.event-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--gray-40);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.event-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Knapprad längst ner i modal */
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.form-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--gray-70);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-buttons button[type="button"] {
+  background: var(--gray-70);
+}
+
+
+.btn-new {
+  background: var(--primary-100);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.btn-edit {
+  background: var(--primary-100);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.btn-delete {
+  background: var(--primary-100);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
