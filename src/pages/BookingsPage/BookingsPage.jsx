@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import {
   getBookings,
   deleteBooking,
@@ -7,14 +7,11 @@ import {
 } from '../../services/bookingService';
 import './BookingsPage.css';
 
-// Tips och trix, tagit av andra system och felsökt med chatgpt
-
 export default function BookingsPage() {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('All Category');
   const [page, setPage] = useState(1);
   const perPage = 8;
 
@@ -115,17 +112,6 @@ export default function BookingsPage() {
             value={search}
             onChange={e => setSearch(e.target.value)}
           />
-          <select
-            className="bp-select"
-            value={category}
-            onChange={e => setCategory(e.target.value)}
-          >
-            <option>All Category</option>
-            <option>Music</option>
-            <option>Sport</option>
-            <option>Fashion</option>
-            <option>Art & Design</option>
-          </select>
         </div>
         <button className="btn-new" onClick={openNew}>+ New Booking</button>
       </div>
